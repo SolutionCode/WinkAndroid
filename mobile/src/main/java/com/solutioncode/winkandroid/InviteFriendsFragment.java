@@ -73,26 +73,25 @@ public class InviteFriendsFragment extends Fragment {
     }
 
 
-    private AdapterView.OnItemClickListener onItemClickListener = new AdapterView
-            .OnItemClickListener() {
+
+    private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
 
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            if (mAdapter.checked.contains(position))
-                mAdapter.checked.remove((Object) position);
+            if(mAdapter.checked.contains(position))
+                mAdapter.checked.remove((Object)position);
             else
                 mAdapter.checked.add(position);
-            mAdapter.notifyDataSetChanged();
         }
     };
+
 
 
     class InviteListAdapter extends BaseAdapter {
 
         private LayoutInflater inflater = LayoutInflater.from(getActivity());
         private List<Integer> checked = new ArrayList<>();
-
 
         @Override
         public int getCount() {
@@ -122,7 +121,7 @@ public class InviteFriendsFragment extends Fragment {
                 holder = (FriendViewHolder) convertView.getTag();
 
 
-            if (checked.contains(position))
+            if(checked.contains(position))
                 holder.checkBox.setImageResource(R.drawable.accept_check_box_checked);
             else
                 holder.checkBox.setImageResource(R.drawable.accept_check_box_unchecked);
@@ -134,13 +133,13 @@ public class InviteFriendsFragment extends Fragment {
             if (position % 2 == 0) {
                 holder.avatarImg.setImageResource(R.drawable.face_1);
             }
-            if (position % 3 == 0) {
+            if(position % 3 == 0) {
                 holder.avatarImg.setImageResource(R.drawable.face_2);
             }
-            if (position % 4 == 0) {
+            if(position % 4 == 0) {
                 holder.avatarImg.setImageResource(R.drawable.face_3);
             }
-            if (position % 5 == 0) {
+            if(position % 5 == 0) {
                 holder.avatarImg.setImageResource(R.drawable.face_4);
             }
 

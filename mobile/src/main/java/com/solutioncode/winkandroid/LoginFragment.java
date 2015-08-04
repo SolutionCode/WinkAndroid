@@ -69,7 +69,7 @@ public class LoginFragment extends Fragment {
     }
 
     private void goToMain() {
-        startActivity(new Intent(getActivity(), MainActivity.class).addFlags(Intent
+        startActivity(new Intent(getActivity(), HomeActivity.class).addFlags(Intent
                 .FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
         getActivity().finish();
     }

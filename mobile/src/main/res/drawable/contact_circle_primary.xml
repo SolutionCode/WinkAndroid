@@ -4,19 +4,11 @@
     <item>
         <shape
             android:shape="oval">
-            <solid android:color="@color/accent"/>
+            <solid android:color="@color/primary_light"/>
             <size
                 android:width="25dp"
                 android:height="25dp"/>
         </shape>
     </item>
-
-    <item
-        android:id="@+id/accepted"
-        android:bottom="15dp"
-        android:drawable="@drawable/accepted"
-        android:left="15dp"
-        android:right="15dp"
-        android:top="15dp"/>
 
 </layer-list>
