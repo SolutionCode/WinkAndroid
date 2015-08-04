@@ -2,7 +2,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@color/login_blue_light"
+             android:background="@color/primary_light"
              tools:context="com.solutioncode.winkandroid.LoginFragment">
 
     <ImageView
@@ -57,7 +57,7 @@
                 android:paddingLeft="10dp"
                 android:textColor="@color/white"
                 android:text="@string/connect_with_facebook"
-                android:background="@drawable/login_button_selector"
+                android:background="@drawable/button_selector_dark"
                 android:textAllCaps="false"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 />

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@null"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar_img"
+        android:layout_margin="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/face_2"
+        android:scaleType="centerCrop"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_toLeftOf="@+id/invited_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Szczepan Sendur"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:id="@+id/status_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Already in app"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/accent"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/invited_img"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/accept_check_box_unchecked"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/accept_check_box_unchecked"/>
+
+    </RelativeLayout>
+</LinearLayout>

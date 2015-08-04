@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="login_blue_light">#44c8ff</color>
-    <color name="login_blue_dark">#2797c5</color>
+    <color name="primary_light">#44c8ff</color>
+    <color name="primary_dark">#2797c5</color>
     <color name="white">#ffffff</color>
     <color name="black">#222222</color>
     <color name="accent">#f9416c</color>
