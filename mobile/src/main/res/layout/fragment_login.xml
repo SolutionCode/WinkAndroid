@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/login_blue_light"
+             tools:context="com.solutioncode.winkandroid.LoginFragment">
+
+    <ImageView
+        android:id="@+id/background_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|bottom"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/logo_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_login"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_sign"/>
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/facebook"
+                android:drawablePadding="20dp"
+                android:paddingRight="50dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:text="@string/connect_with_facebook"
+                android:background="@drawable/login_button_selector"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:text="Terms of use"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/terms_of_use_txt"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
