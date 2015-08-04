@@ -73,7 +73,6 @@ public class InviteFriendsFragment extends Fragment {
     }
 
 
-
     private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
 
 
@@ -83,10 +82,9 @@ public class InviteFriendsFragment extends Fragment {
                 mAdapter.checked.remove((Object)position);
             else
                 mAdapter.checked.add(position);
+            mAdapter.notifyDataSetChanged();
         }
     };
-
-
 
     class InviteListAdapter extends BaseAdapter {
 

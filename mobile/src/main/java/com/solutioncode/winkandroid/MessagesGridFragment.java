@@ -1,8 +1,8 @@
 package com.solutioncode.winkandroid;
 
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -31,8 +32,8 @@ public class MessagesGridFragment extends Fragment {
 
     public static final String TAG = "MessagesGridFragment";
 
-    @InjectView(R.id.invite_btn)
-    FloatingActionButton inviteBtn;
+    @InjectView(R.id.invite_img)
+    ImageView inviteBtn;
     @InjectView(R.id.toolbar)
     Toolbar toolbar;
     @InjectView(R.id.gridView)
@@ -55,6 +56,7 @@ public class MessagesGridFragment extends Fragment {
         ((ActionBarActivity) getActivity()).getSupportActionBar().setTitle(null);
         gridView.setAdapter(mAdapter = new ContectsGridAdapter());
         gridView.setOnItemClickListener(onItemClickListener);
+        inviteBtn.setOnClickListener(onClickListener);
 
         return contentView;
     }
@@ -64,6 +66,17 @@ public class MessagesGridFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+
+    private View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()){
+                case R.id.invite_img:
+                    startActivity(new Intent(getActivity(), InviteFriendsActivity.class));
+                    break;
+            }
+        }
+    };
 
     private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
 
